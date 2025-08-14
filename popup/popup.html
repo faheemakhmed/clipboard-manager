@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Clipboard History</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Clipboard History</h1>
+    <div class="controls">
+      <input id="search" type="text" placeholder="Search…" aria-label="Search clipboard history" />
+      <select id="maxItems" title="Max items to keep" aria-label="Max items to keep">
+        <option value="50">50</option>
+        <option value="75">75</option>
+        <option value="100" selected>100</option>
+        <option value="150">150</option>
+        <option value="200">200</option>
+      </select>
+      <button id="clearBtn" title="Clear all" aria-label="Clear history">Clear</button>
+    </div>
+  </header>
+
+  <main>
+    <ul id="list" role="list"></ul>
+    <div id="empty">No items yet. Copy something to get started!</div>
+  </main>
+
+  <footer>
+    <span class="hint">Tip: Click any item to copy it back.</span>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
