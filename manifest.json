@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Clipboard History Manager",
+  "description": "Keep a persistent log of copied text and quickly search and re-copy from history.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Clipboard History",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "storage",
+    "clipboardRead",
+    "clipboardWrite",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+  }
+}
