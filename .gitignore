@@ -1,0 +1,18 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node.js deps if i later add tooling
+node_modules/
+
+# Build outputs (if i later add a bundler)
+dist/
+build/
+
+# Env files
+.env
+.env.local
+.env.*
